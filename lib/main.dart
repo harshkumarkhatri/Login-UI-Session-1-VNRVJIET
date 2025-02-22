@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_app/tabbar_impl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,9 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
           passwordController.text == password) {
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (_) => HomeScreen(password: password, username: username),
-          ),
+          MaterialPageRoute(builder: (_) => TabBarImpl()),
         );
       } else {
         showSnackbar(context, "Username or password incorrect.");
