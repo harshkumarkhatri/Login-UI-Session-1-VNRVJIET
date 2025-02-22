@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_app/api_impl.dart';
 import 'package:login_app/side_menu_bar_impl_new.dart';
 
 void main() {
@@ -49,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
           passwordController.text == password) {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (_) => SideMenuBarImplNew()),
+          MaterialPageRoute(builder: (_) => APIImpl()),
         );
       } else {
         showSnackbar(context, "Username or password incorrect.");
